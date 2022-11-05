@@ -5,23 +5,6 @@ from django.db import models
 class Familia(models.Model):
 
     nombre = models.CharField(max_length=30)
-
-class Padre(models.Model):
-    nombre = models.CharField(max_length=30)
+    relacion = models.CharField(max_length=20)
     edad = models.IntegerField()
-    fecha_nacimiento = models.DateField()
-
-class Madre(models.Model):
-    nombre = models.CharField(max_length=30)
-    edad = models.IntegerField()
-    fecha_nacimiento = models.DateField()
-
-class Tio(models.Model):
-    nombre = models.CharField(max_length=30)
-    edad = models.IntegerField()
-    fecha_nacimiento = models.DateField()
-
-class Primo(models.Model):
-    nombre = models.CharField(max_length=30)
-    edad = models.IntegerField()
-    fecha_nacimiento = models.DateField()
+    fecha_de_ingreso = models.DateTimeField()
